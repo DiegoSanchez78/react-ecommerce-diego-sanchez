@@ -1,0 +1,20 @@
+.Nav-logo {
+    width: 100px;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: black;
+    text-decoration: none;
+
+}
+.NavMargin {
+    margin: 0PX 25PX 0PX 25PX;
+}
+
+.NavText {
+    color: black;
+    text-decoration: none;
+}

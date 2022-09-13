@@ -1,0 +1,29 @@
+
+
+.CardWidth {
+    width: 300px;
+    background-color: rgb(17, 16, 16);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 0px;
+    box-shadow: 1px 5px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+.CardEffect:hover{
+    background-color: rgb(33, 31, 31);
+}
+
+
+.CardImg {
+    width: 250px;
+    margin: 20px 0px 0px 0px;
+    border-radius: 10px ;
+}
+
+.CardFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+}

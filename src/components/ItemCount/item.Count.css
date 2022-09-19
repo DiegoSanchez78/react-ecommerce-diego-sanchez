@@ -1,0 +1,7 @@
+.countButton {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: rgb(160, 0, 0);
+    font-size: large;
+}

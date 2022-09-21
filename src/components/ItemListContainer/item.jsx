@@ -4,7 +4,7 @@ import ItemCount from '../ItemCount/itemCount';
 import './cards.css';
 
 
-function Card(props) {
+function Item(props) {
     return (
       
       <div className='CardWidth CardEffect' >
@@ -22,4 +22,4 @@ function Card(props) {
       </div>
     );
   }
-  export default Card;
+  export default Item;

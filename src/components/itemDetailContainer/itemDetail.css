@@ -1,0 +1,45 @@
+.itemDetailFlex {
+    display: flex;
+    margin: 10px 80px;
+    justify-content: center;
+    /* width: 70%;
+    height: 40%; */
+}
+
+.itemDetailImg {
+    height: 25rem;
+    border-radius: 10px;
+}
+
+.itemDetailPaddig {
+    padding: 0px 20px 0px 20px;
+}
+
+.itemDetailContainer, button {
+    border :rgb(255, 255, 255) solid 1px;
+    border-radius: 10px;
+    padding: 12px 23px;
+    width: 243px;
+    font-size: 15px;
+}
+p {
+    font-size: 1rem;
+}
+
+
+button:hover{
+    /* background-color: rgb(33, 31, 31); */
+    opacity: 80%;
+    border :none solid 1.5px;
+    font-size: 16px;
+    box-shadow: 1px 5px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.detailContainer {
+    border :rgb(255, 255, 255) solid 1px;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px;
+  
+}

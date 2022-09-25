@@ -19,11 +19,10 @@ export default function ItemCount(props){
         }
     }
     return (
-        <div>
-            <button className="countButton" onClick={CountClick}>+</button>
-            <span>{Count}</span>
+        <div className="countButtonBorder">
             <button className="countButton" onClick={restClick}>-</button>
-            
+            <span>{Count}</span>
+            <button className="countButton" onClick={CountClick}>+</button>
         </div>
     )
 }

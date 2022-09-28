@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { getOneItem } from '../../service/mockApi';
 import ItemDetail from './itemDetail';
+import {useParams} from 'react-router-dom'
 
 function ItemDetailContainer() {
     let [data, setData] = useState({});
 
+    const {itemid}= useParams();
+
     useEffect( ()=>{
-    getOneItem().then( (respuestaDatos)=> setData(respuestaDatos))
-    },[]);
+    getOneItem(itemid).then( (respuestaDatos)=> setData(respuestaDatos))
+    },[itemid]);
 
     return (
         <div>

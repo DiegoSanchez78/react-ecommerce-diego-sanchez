@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+
 import './App.css';
 import NavBar from './components/Navbar/NavBar';
 import Footer from './components/Footer/Footer';
@@ -6,6 +6,8 @@ import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// eslint-disable-next-line
+import CartRoute from './components/Cart/cart.jsx';
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route  path='/' element={<ItemListContainer/>}/>
           <Route path='/guitar/:itemid' element={<ItemDetailContainer/>}/>
           <Route  path='/categoria/:cat' element={<ItemListContainer/>}/>
+          <Route  path='/cart' element={<CartRoute/>}/>
           <Route path='*' element={
           <h2>Pagina no encontrada ,vuelva atras</h2>}/>
           

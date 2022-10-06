@@ -1,16 +1,19 @@
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ItemCount from '../ItemCount/itemCount';
 import './itemDetail.css';
 import { Link } from 'react-router-dom';
-
+import { carCtext } from '../../context/carContext';
 
 function ItemDetail(props) {
+  const{addItem} = useContext(carCtext)
   
   const [estadoCart,setEstadoCart] = useState(false)
 
   function handleAddToCart(count){
-    <h2>`agregaste carrito ${count}`</h2>
+    // <h2>`agregaste carrito ${count}`</h2>
+      addItem(props, count)
+    // ver si va este estado
     setEstadoCart(true)
   }
     return (
@@ -29,7 +32,7 @@ function ItemDetail(props) {
             {/* <button >Buy</button> */}
             {/* <h2>agregaste carrito ${props.count}</h2> */}
             
-        {estadoCart === false? <ItemCount stock={5} inicio={1} onAddToCard={handleAddToCart}/>
+        {estadoCart === false? <ItemCount stock={props.stock}  inicio={1} onAddToCard={handleAddToCart}/>
         : <Link to="/cart/">
         <button>Finalizar compra</button>
         </Link>}

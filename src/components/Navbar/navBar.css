@@ -19,5 +19,11 @@
     text-decoration: none;
 }
 .NavPadding {
-    padding: 0% 25%;
+    padding: 0% 21%;
+}
+
+.cartFlex {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
 }

@@ -16,10 +16,12 @@ function ItemDetailContainer() {
         <div>
           <ItemDetail   
           key={data.id}
+          id={data.id}
           price={data.price}
           title={data.title}
           img={data.img}
           detail={data.detail}
+          stock={data.stock}
           category={data.category}/>
         </div>
     );

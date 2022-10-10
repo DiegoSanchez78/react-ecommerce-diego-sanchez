@@ -86,7 +86,7 @@ const data =[
         return new Promise((resolve,reject)=> {
             setTimeout(()=>{
                 resolve(data);
-            },1000);
+            },500);
         })
     }
 
@@ -95,13 +95,13 @@ const data =[
         return new Promise((resolve,reject)=> {
             let itemFind = data.find((item)=> {
                 return item.id === parseInt(idItem)
-                });
-
-            if (itemFind) resolve(itemFind);
-            else reject (new Error("item no encontrado"));
-            // setTimeout(()=>{
-            //     resolve(data);
-            // },2000);
+            });
+            setTimeout(()=>{
+             if (itemFind) resolve(itemFind);
+             else reject (new Error("item no encontrado"));
+            
+                // resolve(data);
+            },500);
         });
     }
 
@@ -109,12 +109,12 @@ const data =[
         return new Promise((resolve,reject)=> {
             let itemFind = data.filter((item)=> {
                 return item.category === cat
-                });
-
-            if (itemFind) resolve(itemFind);
-            else reject (new Error("item no encontrado"));
-            // setTimeout(()=>{
-            //     resolve(data);
-            // },2000);
+            });
+            setTimeout(()=>{
+                if (itemFind) resolve(itemFind);
+                else reject (new Error("item no encontrado"));
+            
+                // resolve(data);
+            },500);
         });
     }

@@ -20,7 +20,7 @@
     border-radius: 10px;
     padding: 12px 23px;
     width: auto;
-    font-size: 15px;
+    font-size: 0.8rem;
 }
 p {
     font-size: 1rem;
@@ -31,7 +31,7 @@ button:hover{
     /* background-color: rgb(33, 31, 31); */
     opacity: 80%;
     border :none solid 1.5px;
-    font-size: 16px;
+    font-size: 1rem;
     box-shadow: 1px 5px 2px 5px rgba(0, 0, 0, 0.3);
 
 }
@@ -43,3 +43,4 @@ button:hover{
     margin: 10px;
   
 }
+

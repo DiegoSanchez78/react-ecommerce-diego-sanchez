@@ -1,0 +1,29 @@
+
+.imgCart {
+    width: 8rem;
+    height: 8rem;
+} 
+
+.grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 15% 15% 17% 15% 15% 15% ;
+    grid-template-rows: auto ;
+    align-items: center;
+    border: 5px solid gray;;
+    border-radius: 5px;
+  }
+  .buttonX{
+    height: fit-content;
+
+  }
+  .cartText {
+    font-size: 1rem;
+  }
+  .cartFlex{
+    display: flex;
+    justify-content: center;
+  }
+  .cartPadding {
+    padding: 0px 0px 0px 80px;
+  }

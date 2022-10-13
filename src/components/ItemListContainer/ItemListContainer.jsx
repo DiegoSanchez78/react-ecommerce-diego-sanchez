@@ -1,21 +1,24 @@
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 // import Item from './Card';
-import getItems, { getByCaterory } from '../../service/mockApi'
+import {getItems, getByCaterory} from '../../service/firestore'
 import ItemList from './itemList';
 
 function ItemListContainer() {
-      let  [data, setData] = useState([]);
+      const  [data, setData] = useState([]);
       const [isLoading,setIsLoading] = useState(true)
+      console.log()
 
       const {cat} = useParams();
 
       useEffect( ()=>{
-        setData([])
+        // setData([])
         setIsLoading(true)
         if(cat === undefined){
+          console.log(getItems())
           getItems().then((respuestaDatos) =>
-            setData(respuestaDatos));
+            console.log("->",respuestaDatos))
+            .finally(()=> setIsLoading(false))
         }
         else {
             getByCaterory(cat)

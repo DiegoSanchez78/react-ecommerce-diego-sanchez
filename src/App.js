@@ -9,8 +9,10 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 // eslint-disable-next-line
 import CartRoute from './components/Cart/cart.jsx';
 import CartContextProvider from './context/carContext';
-
+// import { firestore } from './service/firestore';
+import firestore from "./service/firestore"
 function App() {
+  console.log("Firebase:", firestore)
   return (
     <CartContextProvider>
       <BrowserRouter >

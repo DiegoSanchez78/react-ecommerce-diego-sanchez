@@ -19,27 +19,27 @@ const firestore = getFirestore(app);
 
 export  async function getItems(){
   console.log("111111")
-  const collectionRef = collection(firestore, "ibanez");
+  const collectionRef = collection(firestore, "guitar");
   let respuesta = await  getDocs(collectionRef);
   console.log( respuesta)
   
   let dataDocs = respuesta.docs.map((documento) => {
     let docFermateo = {...documento.data(),id : documento.id};
     return docFermateo;
-  })
+  }) 
 console.log(dataDocs)
 return dataDocs
 }
 
 export async function getOneItem(itemidParams){
-  const docRef = doc (firestore,"ibanez",itemidParams)
+  const docRef = doc (firestore,"guitar",itemidParams)
   const docSnashot = await getDoc(docRef);
 
   return{...docSnashot.data(),id : docSnashot.id};
 } 
 
 export async function getByCaterory(catParams){
-  const collectionRef = collection(firestore, "ibanez")
+  const collectionRef = collection(firestore, "guitar")
   const queryCatergory = query(collectionRef, where("category", "==",catParams))
  
   const respuesta = await getDocs(queryCatergory);

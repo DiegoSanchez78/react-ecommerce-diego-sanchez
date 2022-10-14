@@ -17,7 +17,7 @@ function ItemListContainer() {
         if(cat === undefined){
           console.log(getItems())
           getItems().then((respuestaDatos) =>
-            console.log("->",respuestaDatos))
+            setData(respuestaDatos))
             .finally(()=> setIsLoading(false))
         }
         else {

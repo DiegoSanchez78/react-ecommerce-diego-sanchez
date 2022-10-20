@@ -9,12 +9,16 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 // eslint-disable-next-line
 import CartRoute from './components/Cart/cart.jsx';
 import CartContextProvider from './context/carContext';
-// import { firestore } from './service/firestore';
-import firestore from "./service/firestore"
+
+import Checkout from './components/Checkout/checkout.jsx';
+// import firestore, { exportDataToFirebase } from "./service/firestore"
+
+
 function App() {
-  console.log("Firebase:", firestore)
+ 
   return (
     <CartContextProvider>
+      {/* <button onClick={exportDataToFirebase} >envio de items a firebase</button> */}
       <BrowserRouter >
         <div className="App">
           <NavBar/> 
@@ -27,6 +31,7 @@ function App() {
               <Route path='/guitar/:itemid' element={<ItemDetailContainer/>}/>
               <Route  path='/categoria/:cat' element={<ItemListContainer/>}/>
               <Route  path='/cart' element={<CartRoute/> }/>
+              <Route path='/checkout/:orderId' element={<Checkout/>}/>
               <Route path='*' element={
               <h2>Pagina no encontrada ,vuelva atras</h2>}/>
               

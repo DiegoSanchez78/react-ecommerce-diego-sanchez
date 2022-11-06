@@ -15,20 +15,17 @@ const{deleteItem , cart,} = useContext(carCtext)
   if(cart.length === 0){
   return<div> Carrito vacio</div>
   }
-
-  return (
-    <div>
-   <div className="cartFlex">    
-  
-    <h3 >Cantidad de productos : {getTotalItemsInCart()}</h3>
-    <h3 className="cartPadding">Importe Total : {priceFinal()}</h3>
-    </div>
-    
-    <br></br>
-    <button  onClick={emptyCart }> vaciar carrito</button>
-    <div >
-    <br></br>
-    <h4>Detalle de productos:</h4>
+return (
+  <div>
+     <div className="cartFlex">    
+        <h3 >Cantidad de productos : {getTotalItemsInCart()}</h3>
+        <h3 className="cartPadding">Importe Total : {priceFinal()}</h3>
+     </div> 
+     <br></br>
+      <button  onClick={emptyCart }> vaciar carrito</button>
+      <div >
+      <br></br>
+      <h4>Detalle de productos:</h4>
   
 
     {cart.map((cart, index) => {
@@ -42,8 +39,7 @@ const{deleteItem , cart,} = useContext(carCtext)
           <h5>Cantidad : {cart.count }</h5>
           <h5>total: usd {cart.price * cart.count}</h5>
           <button className="buttonX" onClick={()=>deleteItem(cart.id) } > Eliminar producto</button>
-        
-        </div>
+      </div>
     );
 })}
 

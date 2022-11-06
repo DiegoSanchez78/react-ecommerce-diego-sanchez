@@ -17,17 +17,11 @@ function NavBar() {
               <Link className="NavText" to="/">"Inicio"</Link>
             </li>
             <li className="NavMargin">
-              <Link className="NavText" to="/about">Nosotros</Link>
-            </li>
-            <li className="NavMargin">
               <Link className="NavText" to="/categoria/ibanez">Ibanez</Link>
              </li>
              <li className="NavMargin">
               <Link className="NavText" to="/categoria/gibson">Gibson</Link>
              </li>
-            <li className="NavMargin">
-              <Link className="NavText" to="/about">Contacto</Link>
-           </li>
           </ul>
          <CartWidget/>
         

@@ -1,9 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { carCtext } from "../../context/carContext";
-// import { createBuyOrder } from "../../service/firestore";
 import './cart.css';
-// import {useNavigate} from 'react-router-dom'
 import CheckoutForm from "../CheckoutForm/checkoutForm";
 
 
@@ -14,30 +12,10 @@ const{getTotalItemsInCart} = useContext(carCtext)
 const{emptyCart} = useContext(carCtext)
 const{deleteItem , cart,} = useContext(carCtext)
 
-// const navigate = useNavigate()
-
   if(cart.length === 0){
   return<div> Carrito vacio</div>
   }
 
-  // 12
-// function handleCheckout(){
-//   const orderData = {
-//     buyer: {
-//       name: "diego",
-//       phone:"15635455663",
-//       mail:"diego@mail.com"
-//     },
-//     items: cart,
-//     total: priceFinal()
-//   }
-//   createBuyOrder(orderData).then(orderId =>{
-//     navigate(`/checkout/${orderId} `)
-//   } )
-// }
-  
-
-  // 12
   return (
     <div>
    <div className="cartFlex">    
@@ -70,10 +48,7 @@ const{deleteItem , cart,} = useContext(carCtext)
 })}
 
 </div>
-{/* 12 */}
   <CheckoutForm/>
-    {/* <button onClick={handleCheckout}>Finalizar compra</button> */}
-    {/* 12 */}
 </div>
   );
 }

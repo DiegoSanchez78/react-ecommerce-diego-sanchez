@@ -1,8 +1,8 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import {getFirestore , collection, getDocs,doc,getDoc,query,where,addDoc} from "firebase/firestore";
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyAF3mepZIuBXulCetwqnXjCBO0kp1LQE7Y",
   authDomain: "guitarhousereact.firebaseapp.com",
@@ -12,7 +12,6 @@ const firebaseConfig = {
   appId: "1:860192471896:web:b051a5611388f53953c32d"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 const firestore = getFirestore(app);
@@ -20,13 +19,12 @@ const firestore = getFirestore(app);
 export  async function getItems(){
   const collectionRef = collection(firestore, "guitar");
   let respuesta = await  getDocs(collectionRef);
-  console.log( respuesta)
   
   let dataDocs = respuesta.docs.map((documento) => {
     let docFermateo = {...documento.data(),id : documento.id};
     return docFermateo;
   }) 
-// console.log(dataDocs)
+
 return dataDocs
 }
 
@@ -151,13 +149,6 @@ export async function exportDataToFirebase(){
 
 }
 
-// export async function buyDetail(price){
-//   const  buyDetailRef = doc (firestore,"orders",price)
-//   const buyDetailSnashot = await getDoc(buyDetailRef);
-
-//   return{...buyDetailSnashot.data(),price: buyDetailSnashot.priced};
-// } 
-
 
 export default firestore;
-// export {app}
+
